@@ -1,5 +1,5 @@
 # Load required packages
-pacman::p_load(tidyverse, harrypotter,readxl)
+pacman::p_load(tidyverse,readxl)
 
 # Read in dataset
 df <- read_excel(here::here("raw-data", "2024-03-05-gene-data.xlsx"))
