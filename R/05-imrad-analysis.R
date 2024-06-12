@@ -2,7 +2,7 @@
 pacman::p_load(tidyverse, lme4, gt, readr, lmerTest, gtsummary)
 
 # Load the cleaned data
-df <- read_csv(here::here("data/2024-04-05-gene-data.csv"))
+df <- read_csv(here::here("data/2024-03-05-gene-data.csv"))
 
 # Fit the mixed-effects model
 model <- lmer(gene_expression ~ treatment * conc * cell_line + (1 | name), data = df)

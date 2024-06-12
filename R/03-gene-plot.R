@@ -2,7 +2,7 @@
 pacman::p_load(tidyverse, showtext,colourvalues,ggrepel,egg, here,readxl,harrypotter, ggpubr, patchwork)
 # Read in cleaned dataset
 df <- read_csv(
-  here::here("data", "2024-04-05-gene-data.csv")
+  here::here("data", "2024-03-05-gene-data.csv")
 )
 # Remove "GL-" from the name of the gene lines
 df$name <- fct_recode(df$name,

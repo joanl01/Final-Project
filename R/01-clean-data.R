@@ -2,7 +2,7 @@
 pacman::p_load(tidyverse, harrypotter,readxl)
 
 # Read in dataset
-df <- read_excel(here::here("raw-data", "2024-04-04-gene-data.xlsx"))
+df <- read_excel(here::here("raw-data", "2024-03-05-gene-data.xlsx"))
 # Get a glance on dataset
 head(df)
 
@@ -31,4 +31,4 @@ df$name <- fct_recode(df$name,
 )
 # Want to find if there are effect of treatment on the effect of growth factor on the gene expression
 # Save cleaned data into csv
-write_csv(df, "data/2024-04-05-gene-data.csv")
+write_csv(df, "data/2024-03-05-gene-data.csv")

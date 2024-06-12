@@ -1,7 +1,7 @@
 # Load required packages
 pacman::p_load(tidyverse,readr)
 # Load dataset
-df <- read_csv(here::here("data", "2024-04-05-gene-data.csv"))
+df <- read_csv(here::here("data", "2024-03-05-gene-data.csv"))
 # Filter dataset to different categories:
 # Cell-type 101 and new tratment
 df_af42_ct101 <- df %>%
