@@ -1,46 +1,25 @@
-::: {#quarto-content .page-columns .page-rows-contents .page-layout-article}
-::: {#quarto-document-content .content role="main"}
-::: {#title-block-header .quarto-title-block .default}
-::: quarto-title
-# Statistical Consulting Final Project {#statistical-consulting-final-project .title}
-:::
 
-::: quarto-title-meta
+# Statistical Consulting Final Project 
+
 <div>
 
-::: quarto-title-meta-heading
-Author
-:::
 
-::: quarto-title-meta-contents
-a1825938 Joan Shu Ting Lim
-:::
-
+Author : a1825938 Joan Shu Ting Lim
 </div>
 
 <div>
 
-::: quarto-title-meta-heading
-Published
-:::
 
-::: quarto-title-meta-contents
-June 13, 2024
-:::
+Published: June 13, 2024
 
 </div>
-:::
-:::
 
-::: {#outline .section .level1}
 # Outline
 
 This repository contains the code, data, and resources used for the
 analysis of Dr Karl Berator. It includes all the necessary scripts,
 datasets, and documentation to reproduce the analysis and findings.
-:::
 
-::: {#data .section .level1}
 # Data
 
 The data was sent by Dr Karl Berator through email as an Excel (`.xlsx`)
@@ -66,9 +45,7 @@ data. The columns each represent a variable :
 
 Each row represents an observation containing information of each
 variable.
-:::
 
-::: {#data-cleaning .section .level1}
 # Data Cleaning
 
 The code used to conduct cleaning of data can be found in the "R" folder
@@ -102,9 +79,7 @@ file name `2024-03-05-gene-data.csv`.
 This series of steps ensures that the dataset is cleaned and
 standardised, making it ready for further analysis, such as
 investigating the effect of treatment on gene expression.
-:::
 
-::: {#task-1-powerpoint-presentation-on-exploratory-data-analysis-eda .section .level1}
 # Task 1 : Powerpoint Presentation on Exploratory Data Analysis (EDA)
 
 The code used to conduct EDA of the data can be found in the folder "R",
@@ -113,11 +88,11 @@ packages are first loaded. Then, the cleaned dataset is loaded from
 `2024-03-05-gene-data.csv` located in the "data" folder.
 
 The dataset is filtered into 4 different categories based on the
-treatment used and the cell_line: - Data with "Activating factor 42" as
-treatment and "Cell-type 101" cell line. - Data with "Activating factor
-42" as treatment and "Wild-type" cell line. - Data with "Placebo" as
-treatment and "Cell-type 101" cell line. - Data with "Placebo" as
-treatment and "Wild-type" cell line.
+treatment used and the cell_line: 
+-   Data with "Activating factor 42" as treatment and "Cell-type 101" cell line.
+-   Data with "Activating factor 42" as treatment and "Wild-type" cell line.
+-   Data with "Placebo" as treatment and "Cell-type 101" cell line.
+-   Data with "Placebo" as treatment and "Wild-type" cell line.
 
 An EDA is then performed on the filtered datasets. This provides some
 statistics, such as mean, variance, median of the dataset.
@@ -148,9 +123,7 @@ The plot for "Wild-type" cell line is then saved as a PDF file in the
 The summary statistics and plots generated are used to create a
 Powerpoint presentation named `Powerpoint_a1825938` in the
 "powerpoint_slides" folder.
-:::
 
-::: {#task-2-figure .section .level1}
 # Task 2 : Figure
 
 The code used to produce the required figure can be found in the folder
@@ -178,9 +151,7 @@ customisations. The two plots are then combined into one figure, with a
 shared legend positioned at the bottom. The combined figure is then
 saved as a 500 resolution TIFF file in the "pretty-figures" folder with
 file name `gene_plot.tiff`.
-:::
 
-::: {#task-3-sample-size-calculation .section .level1}
 # Task 3 : Sample size calculation
 
 The code used to calculate the required sample size can be found in the
@@ -189,7 +160,7 @@ Berator requested for a sample size calculation of power 90% and
 significance level 0.05 for a linear regression of gene expression with
 predictors concentration, cell age, treatment (two levels), cell type
 (two levels), and media (two levels). A previous study was done and an
-[\\(R\^2\\)]{.math .inline} of 0.1 between the predictors and the
+$R^2$ of 0.1 between the predictors and the
 response level was obtained.
 
 To calculate the sample size, the parameters below are defined:
@@ -200,25 +171,23 @@ To calculate the sample size, the parameters below are defined:
 -   The number of predictors is 5, because there are 5 predictors
     (concentration, cell age, treatment, cell type and media)
 
-The effect size [\\(f\^2\\)]{.math .inline} is calculated using the
-formula [\\\[ f\^2 = \\frac{R\^2}{1-R\^2}\\\]]{.math .display}
+The effect size $f^2$ is calculated using the
+formula $f^2 = \frac{R^2}{1-R^2}$
 
 The required sample size is calculated using the power analysis function
-for linear regression. The total sample size [\\(n\\)]{.math .inline} is
-determined using the formula [\\\[n = u + v + 1\\\]]{.math .display}
-where [\\(u\\)]{.math .inline} is the number of predictors, and
-[\\(v\\)]{.math .inline} is the number of error degrees which can be
-observed from the output. The observed [\\(v\\)]{.math .inline} is
+for linear regression. The total sample size $n$ is
+determined using the formula $n = u + v + 1$
+where $u$ is the number of predictors, and
+$v$ is the number of error degrees which can be
+observed from the output. The observed $v$ is
 147.8645.
 
 The required sample size for for a linear regression to achieve a power
 of 90% at a significance level of 0.05 with a previously calculated
-R-squared of 0.1 with 5 predictor is found to be [\\\[ n = 5 +
-147.8645 + 1 = 153.8645\\\]]{.math .display} Rounding 153.8645 to the
+R-squared of 0.1 with 5 predictor is found to be $n = 5 +
+147.8645 + 1 = 153.8645$ Rounding 153.8645 to the
 next integer, the sample size required is 154.
-:::
 
-::: {#task-4-imrad-report .section .level1}
 # Task 4 : IMRaD Report
 
 The code used to conduct the analysis to write the IMRaD report can be
@@ -251,6 +220,4 @@ tables for the random effects are named as `random_pred_results`.
 
 The resulting IMRaD report concluding the findings can be found in the
 "Reports" folder with the file name `Karl_IMRaD.pdf`.
-:::
-:::
-:::
+
