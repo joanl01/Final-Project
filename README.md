@@ -221,3 +221,8 @@ tables for the random effects are named as `random_pred_results`.
 The resulting IMRaD report concluding the findings can be found in the
 "Reports" folder with the file name `Karl_IMRaD.pdf`.
 
+# Miscellaneous
+All the analysis is conducted in RStudio Version 2024.04.2+764, and R Version 4.4.0.
+
+All figures can be found in the folder "pretty-figures" and all tables can be found in the "tables" folder. 
+
