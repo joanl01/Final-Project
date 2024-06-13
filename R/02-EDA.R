@@ -1,5 +1,5 @@
 # Load required packages
-pacman::p_load(tidyverse,readr)
+pacman::p_load(tidyverse,readr, harrypotter)
 # Load dataset
 df <- read_csv(here::here("data", "2024-03-05-gene-data.csv"))
 # Filter dataset to different categories:
@@ -57,7 +57,7 @@ ggsave(
 # Plot for Wild-type
 wt_plot <- df_wt |> ggplot(
   aes(x = conc, y = gene_expression, col = name, shape = treatment)
-) + geom_point(size = 3) + geom_line(linewidth = 1.1) + scale_color_hp(discrete = TRUE, house = "Ravenclaw") +
+) + geom_point(size = 3) + geom_line(linewidth = 1.1) + harrypotter::scale_color_hp(discrete = TRUE, house = "Ravenclaw") +
   labs(
     title = "Plot of Wild-type against different concentrations of different treatments",
     x = "Concentration of treatment",
